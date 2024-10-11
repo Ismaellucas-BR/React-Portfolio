@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Uber - Em andamento",
+    "description": "Recriando o site da Uber utilizando Next js e Tailwind css.",
+    "category": "React js",
+    "image": "/assets/UberMain.jpg",
+    "alt": "Aplicação simulando site da Uber",
+    "gitHub": "https://github.com/Ismaellucas-BR/Next-Uber",
+    "linkSite": "",
+    "imageToSlider": [
+      "/assets/UberMain.jpg",
+      "/assets/UberMain.jpg",
+      "/assets/UberMain.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Feed",
+    "description": "Aplicação simulando uma rede social, o que possibilitou estudar mais os estados React js",
+    "category": "React Js",
+    "image": "/assets/MainPrintFeed.jpg",
+    "alt": "Aplicação simulando uma rede social",
+    "gitHub": "https://github.com/Ismaellucas-BR/Feed",
+    "linkSite": "https://feed.developerismaellucas.com/",
+    "imageToSlider": [
+      "/assets/MainPrintFeed.jpg",
+      "/assets/MainPrintFeed.jpg",
+      "/assets/MainPrintFeed.jpg"
+    ]
+  }
+]

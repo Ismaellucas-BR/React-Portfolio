@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+    --light-green: rgb(92, 210, 185);
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.bg-skill {
+  background-image: url("/assets/bg-skills.jpg");
+}
+.most-recent-work {
+  background-image: url("/assets/woman-with-artistic-make-up-P7ZSU5P.jpg");
+}
+.bg-movement {
+  background-image: url("/assets/night-star-background.jpg");
+}
+.text-gradient {
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(173, 173, 173));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient-blue {
+  background-image: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient-white {
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.underline-half::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background-color: var(--light-green);
+}
+.underline-half2::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 3px;
+  background-color: var(--light-green);
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--light-green) !important;
+}
+.swiper-pagination-bullet {
+  background-color: white !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--light-green) !important;
+}
+.radial {
+  background: rgb(92, 210, 185);
+  background: radial-gradient(
+    circle at center,
+    rgba(92, 210, 185, 1) 0%,
+    rgba(92, 210, 185, 0) 80%
+  );
+}
+
+/*Card page Sobre*/
+.TimelineCardContentWrapper-sc-1427v1d-2 section {
+  border: 1px solid white;
+}
+.ImageWrapper-sc-1yk7mm5-8 img {
+  object-fit: contain; /* Ajusta a imagem para caber sem esticar */
+  max-width: 100%; /* Garante que a imagem não exceda a largura do card */
+  max-height: 100%; /* Garante que a imagem não exceda a altura do card */
+}
+.CardMediaHeader-sc-1yk7mm5-7 h1,
+.MediaDetailsWrapper-sc-1yk7mm5-3 h2,
+.TimelineContentDetailsWrapper-sc-d7qjm1-7 p {
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+.MediaDetailsWrapper-sc-1yk7mm5-3 {
+  margin: 0;
+}
+.CardSubTitle-sc-d7qjm1-2 {
+  margin-left: 15px !important;
+}
+.CardTitle-sc-d7qjm1-3 {
+  color: white !important;
+}
