@@ -1,5 +1,5 @@
 import React from "react";
-import { useRouter } from "next/navigation";
+import { useNavigate } from "react-router-dom";
 
 function truncateText(text, maxLength) {
   if (text.length <= maxLength) return text;
@@ -7,7 +7,7 @@ function truncateText(text, maxLength) {
 }
 
 function Menu({ menuItem }) {
-  const { push } = useRouter();
+  const { push } = useNavigate();
 
   function HandleViewProjectDetails(id) {
     push(`projects/${id}`);

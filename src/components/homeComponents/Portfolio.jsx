@@ -1,6 +1,6 @@
 import MainTitle from "../MainTitle";
 import { useState } from "react";
-import projects from "data/projects.json";
+import projects from "../../../data/projects.json";
 import Menu from "../Menu";
 import Button from "../Button";
 
@@ -26,11 +26,11 @@ function Portfolio() {
   return (
     <section className="flex flex-col gap-5 p-5 lg:max-w-[1500px] lg:mx-8 items-center">
       <div className="w-full flex flex-col items-center font-semibold">
-        <h3 className="text-light-green text-sm font-sans">PORTFOLIO</h3>
+        <h3 className="text-light-green text-sm font-inter">PORTFOLIO</h3>
         <MainTitle whiteText="Últimos" greenText="Trabalhos" />
       </div>
       <div className="busca">
-        <h3 className="text-white font-sans font-semibold text-xl">
+        <h3 className="text-white font-inter font-semibold text-xl">
           Faça sua <span className="text-light-green">Busca</span> com apenas{" "}
           <span className="text-light-green">um clique</span>
         </h3>
