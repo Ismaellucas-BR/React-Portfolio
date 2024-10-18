@@ -170,9 +170,9 @@ body {
   border: 1px solid white;
 }
 .ImageWrapper-sc-1yk7mm5-8 img {
-  object-fit: contain; /* Ajusta a imagem para caber sem esticar */
-  max-width: 100%; /* Garante que a imagem não exceda a largura do card */
-  max-height: 100%; /* Garante que a imagem não exceda a altura do card */
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
 }
 .CardMediaHeader-sc-1yk7mm5-7 h1,
 .MediaDetailsWrapper-sc-1yk7mm5-3 h2,
@@ -188,4 +188,15 @@ body {
 }
 .CardTitle-sc-d7qjm1-3 {
   color: white !important;
+}
+.rc-title {
+  font-family: "Inter", sans-serif;
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }

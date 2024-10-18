@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Uber - Em andamento",
-    "description": "Recriando o site da Uber utilizando Next js e Tailwind css.",
+    "description": "Recriando o site da Uber utilizando React js e Tailwind css.",
     "category": "React js",
     "image": "/assets/UberMain.jpg",
     "alt": "Aplicação simulando site da Uber",

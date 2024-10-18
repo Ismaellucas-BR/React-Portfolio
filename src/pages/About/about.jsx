@@ -1,19 +1,19 @@
-import React from "react";
-import dynamic from "next/dynamic";
-import FirstSectionHome from "../Components/HomeComponents/FirstSectionHome";
-import SecondSectionHome from "../Components/HomeComponents/SecondSectionHome";
-import MostRecentWork from "../Components/HomeComponents/MostRecentWork";
-const Timeline = dynamic(
-  () => import("../Components/SobreComponents/VerticalTimeline"),
-  {
-    ssr: false,
-  }
+import React, { Suspense, lazy } from "react";
+import FirstSectionHome from "../../components/homeComponents/FirstSectionHome";
+import SecondSectionHome from "../../components/HomeComponents/SecondSectionHome";
+import MostRecentWork from "../../components/HomeComponents/MostRecentWork";
+
+const Timeline = lazy(() =>
+  import("../../components/SobreComponents/VerticalTimeline")
 );
+
 function About() {
   return (
     <>
       <FirstSectionHome />
-      <Timeline />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Timeline />
+      </Suspense>
       <SecondSectionHome />
       <MostRecentWork />
     </>

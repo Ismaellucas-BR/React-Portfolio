@@ -1,10 +1,12 @@
 import React from "react";
 import * as motion from "framer-motion/client";
-import Data from "../../../../data/projects.json";
-import GitHub from "src/app/Components/icons/Github";
-import PlayButton from "src/app/Components/icons/PlayButton";
+import Data from "../../../data/projects.json";
+import GitHub from "../../components/icons/GitHub";
+import PlayButton from "../../components/icons/PlayButton";
+import { useParams } from "react-router-dom";
+
 function DinamicPage({ params }) {
-  const { id } = params;
+  const { id } = useParams();
   const project = Data.find((proj) => proj.id === parseInt(id));
 
   if (!project) {
@@ -18,7 +20,7 @@ function DinamicPage({ params }) {
         style={{ backgroundImage: `url(${project.image})` }}
       >
         <div className="w-full h-full bg-black/70"></div>
-        <h1 className="absolute top-2/4 left-2/4 translate-x-[-50%] text-5xl font-bold font-sans">
+        <h1 className="absolute top-2/4 left-2/4 translate-x-[-50%] text-5xl font-bold font-inter">
           {project.name}
         </h1>
       </div>

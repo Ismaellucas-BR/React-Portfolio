@@ -1,11 +1,11 @@
 import Data from "../../../data/projects.json";
-import { useRouter } from "next/navigation";
+import { useNavigate } from "react-router-dom";
 
 function ProjectsPage() {
-  const { push } = useRouter();
+  const navigate = useNavigate();
 
   const handleViewProject = (id) => {
-    push(`/projects/${id}`);
+    navigate(`/projects/${id}`);
   };
 
   return (
@@ -25,7 +25,7 @@ function ProjectsPage() {
               height={800}
             />
 
-            <h2 className="group-hover:text-gray-200/70 mt-4 text-3xl font-bold truncate text-ellipsis font-sans">
+            <h2 className="group-hover:text-gray-200/70 mt-4 text-3xl font-bold truncate text-ellipsis font-inter">
               {project.name}
             </h2>
             <p className="mt-2 truncate text-ellipsis font-poppins text-lg group-hover:text-gray-200/70">

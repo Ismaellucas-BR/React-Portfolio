@@ -12,8 +12,9 @@ function LastSection() {
           height={200}
           alt="Ismael Lucas"
         />
-        <h2 className="font-mono text-center">
-          Não tente. Faça… ou não faça. Não há tentativa.
+        <h2 className="font-poppins text-center">
+          O ontem é história, o amanhã é um mistério, mas o hoje é uma dádiva.
+          <br></br>É por isso que se chama presente.
         </h2>
         <div className="flex justify-center gap-10">
           <motion.div

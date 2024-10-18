@@ -2,8 +2,8 @@ import MainMenu from "./MainMenu";
 
 function Header() {
   return (
-    <header className="relative w-screen bg-black text-white flex items-center flex-col h-auto max-w-[1500px] lg:mx-8">
-      <div className="relative flex items-center justify-between w-full p-5 z-10">
+    <header className="relative w-full bg-black text-white flex items-center flex-col h-auto max-w-[1500px] lg:w-full lg:px-5 font-inter">
+      <div className="relative flex items-center justify-center w-full p-5 z-10">
         <div className="item justify-between items-center lg:flex">
           <a href="/">
             <img

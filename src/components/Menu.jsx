@@ -7,10 +7,10 @@ function truncateText(text, maxLength) {
 }
 
 function Menu({ menuItem }) {
-  const { push } = useNavigate();
+  const navigate = useNavigate();
 
   function HandleViewProjectDetails(id) {
-    push(`projects/${id}`);
+    navigate(`projects/${id}`);
   }
 
   return (
@@ -21,7 +21,7 @@ function Menu({ menuItem }) {
           key={item.id}
           onClick={() => HandleViewProjectDetails(item.id)}
         >
-          <div className="item-container bg-[#d35656] bg-opacity-50 border border-[#333] p-4 rounded-lg shadow-md">
+          <div className="item-container bg-opacity-50 border border-[#333] p-4 rounded-lg shadow-md font-inter">
             <img
               src={item.image}
               alt={item.alt}

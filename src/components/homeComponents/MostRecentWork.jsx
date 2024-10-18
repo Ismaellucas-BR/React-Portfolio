@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Data from "data/projects.json";
+import Data from "../../../data/projects.json";
 
 function MostRecentWork() {
   const [slidePerView, setSlidePerView] = useState(2);
@@ -37,7 +37,7 @@ function MostRecentWork() {
   return (
     <section className="most-recent-work lg:w-full flex flex-col items-center gap-5 p-10 lg:pb-20 lg:max-w-[1500px] bg-fixed bg-cover bg-no-repeat bg-center">
       <motion.h2
-        className="font-sans text-4xl text-center font-semibold text-white underline-half2 relative pb-3"
+        className="font-inter text-4xl text-center font-bold text-white underline-half2 relative pb-3"
         initial={{ x: -200 }}
         animate={{ x: [-200, 15, 0] }}
         transition={{ duration: 2, ease: "easeInOut" }}

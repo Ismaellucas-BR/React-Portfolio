@@ -1,8 +1,8 @@
 import { Chrono } from "react-chrono";
 import MainTitle from "../MainTitle";
-import liderImage from "/public/assets/agencia-lider.png";
-import an1Image from "/public/assets/an1.png";
-import dpImage from "/public/assets/DP.jpg";
+import liderImage from "/assets/agencia-lider.png";
+import an1Image from "/assets/an1.png";
+import dpImage from "/assets/DP.jpg";
 
 function VerticalTimeline() {
   const items = [
@@ -15,7 +15,7 @@ function VerticalTimeline() {
       media: {
         type: "IMAGE",
         source: {
-          url: liderImage.src,
+          url: liderImage,
         },
       },
     },
@@ -28,7 +28,7 @@ function VerticalTimeline() {
       media: {
         type: "IMAGE",
         source: {
-          url: an1Image.src,
+          url: an1Image,
         },
       },
     },
@@ -41,7 +41,7 @@ function VerticalTimeline() {
       media: {
         type: "IMAGE",
         source: {
-          url: dpImage.src,
+          url: dpImage,
         },
       },
     },
@@ -54,7 +54,7 @@ function VerticalTimeline() {
     >
       <MainTitle whiteText="Jornada" greenText="Profissional" />
       <Chrono
-        className="w-full  border-b border-red-500"
+        className="w-full font-inter"
         cardWidth="500px"
         items={items}
         mode="VERTICAL_ALTERNATING"

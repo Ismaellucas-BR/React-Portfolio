@@ -14,7 +14,7 @@ function Button({ button, filter }) {
             key={i}
             type="button"
             onClick={() => filter(cat)}
-            className="btn px-3 rounded-full"
+            className="btn px-3 rounded-full font-inter"
             style={{ backgroundColor: bgColor, color: textColor }}
           >
             {cat}
