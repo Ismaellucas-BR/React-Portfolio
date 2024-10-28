@@ -5,15 +5,16 @@ import Instagram from "./Instagram";
 function LastSection() {
   return (
     <section className="radial w-full">
-      <div className="w-full flex flex-col items-center justify-center gap-5 p-5 max-w-[1500px] bg-black bg-opacity-65 h-96">
+      <div className="w-full flex flex-col items-center justify-center gap-10 p-5 max-w-[1500px] bg-black bg-opacity-65 h-96">
         <img
           src="/assets/Logo.png"
           width={400}
           height={200}
           alt="Ismael Lucas"
         />
-        <h2 className="font-poppins text-center">
-          O ontem é história, o amanhã é um mistério, mas o hoje é uma dádiva.
+        <h2 className="font-poppins text-center text-sm lg:text-base">
+          O ontem é história, o amanhã é um mistério,<br></br> mas o hoje é uma
+          dádiva.
           <br></br>É por isso que se chama presente.
         </h2>
         <div className="flex justify-center gap-10">

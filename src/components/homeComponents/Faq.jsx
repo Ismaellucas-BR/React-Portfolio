@@ -9,7 +9,7 @@ import {
 
 function Faq() {
   return (
-    <section className="flex flex-col gap-5 p-10 max-w-[1500px] items-center md:mx-8 font-inter">
+    <section className="flex flex-col gap-5 p-10 w-full max-w-[1500px] items-center md:mx-8 font-inter">
       <MainTitle greenText="FAQ" />
       <Accordion type="single" collapsible className="w-full">
         <AccordionItem value="item-1">

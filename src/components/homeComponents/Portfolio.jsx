@@ -4,9 +4,15 @@ import projects from "../../../data/projects.json";
 import Menu from "../Menu";
 import Button from "../Button";
 
+const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+
 const allCategories = [
   "Tudo",
-  ...new Set(projects.map((item) => item.category)),
+  ...new Set(
+    projects
+      .map((item) => capitalize(item.category.trim().toLowerCase()))
+      .filter((value, index, self) => self.indexOf(value) === index)
+  ),
 ];
 
 function Portfolio() {

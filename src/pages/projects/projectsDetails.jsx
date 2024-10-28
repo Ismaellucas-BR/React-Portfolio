@@ -20,14 +20,14 @@ function DinamicPage({ params }) {
         style={{ backgroundImage: `url(${project.image})` }}
       >
         <div className="w-full h-full bg-black/70"></div>
-        <h1 className="absolute top-2/4 left-2/4 translate-x-[-50%] text-5xl font-bold font-inter">
+        <h1 className="absolute top-2/4 left-2/4 translate-x-[-50%] text-2xl lg:text-5xl font-bold font-inter w-full text-center">
           {project.name}
         </h1>
       </div>
 
       <p className="mt-10 font-inter text-lg">{project.description}</p>
 
-      <div className="flex flex-col justify-start items-start w-full max-w-7xl py-10 gap-5 font-sans text-xl capitalize font-normal lg:p-10">
+      <div className="flex flex-col justify-start items-start w-full max-w-7xl py-10 gap-5 font-inter text-xl capitalize font-normal lg:p-10">
         <div className="flex justify-center items-center gap-5">
           Veja agora:
           <motion.div

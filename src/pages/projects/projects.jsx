@@ -9,7 +9,7 @@ function ProjectsPage() {
   };
 
   return (
-    <section className=" flex flex-col justify-center items-center w-full h-screen gap-10 px-10 py-20 lg:grid lg:grid-cols-3">
+    <section className=" flex flex-col justify-center items-center w-full h-auto gap-10 px-10 py-20 lg:grid lg:grid-cols-3">
       {Data.map((project) => (
         <div
           className="item-con group w-full min-h-60"
@@ -25,10 +25,10 @@ function ProjectsPage() {
               height={800}
             />
 
-            <h2 className="group-hover:text-gray-200/70 mt-4 text-3xl font-bold truncate text-ellipsis font-inter">
+            <h2 className="group-hover:text-gray-200/70 mt-4 text-xl font-bold truncate text-ellipsis font-inter">
               {project.name}
             </h2>
-            <p className="mt-2 truncate text-ellipsis font-poppins text-lg group-hover:text-gray-200/70">
+            <p className="mt-2 truncate text-ellipsis font-poppins text-sm group-hover:text-gray-200/70">
               {project.description}
             </p>
           </div>
