@@ -7,7 +7,7 @@ function FirstSectionHome() {
   return (
     <section
       className="flex flex-col-reverse gap-5 w-full pb-10 lg:flex 
-     lg:max-w-[1500px] lg:mx-8 lg:flex-row-reverse lg:items-center p-5"
+     lg:max-w-[1500px] lg:mx-8 lg:flex-row-reverse lg:items-center md:p-5"
     >
       <div className="left-side w-full lg:w-1/2 lg:flex lg:justify-center">
         <div className="lg:w-[500px]">
@@ -20,7 +20,7 @@ function FirstSectionHome() {
           />
         </div>
       </div>
-      <div className="right-side w-full flex flex-col gap-5 items-start lg:w-1/2">
+      <div className="right-side w-full flex flex-col gap-5 items-start p-5 lg:w-1/2">
         <div>
           <motion.h2
             className="font-inter text-xl font-semibold text-light-green"
@@ -45,9 +45,9 @@ function FirstSectionHome() {
           </motion.h1>
         </div>
         <span className="font-inter text-gradient lg:text-lg">
-          Tenho 28 anos e atualmente atuo como PJ, desenvolvendo sites e
+          Tenho 29 anos e atualmente atuo como PJ, desenvolvendo sites e
           funcionalidades para empresas. Hoje sou{" "}
-          <strong>desenvolverdor Front-end</strong>, utilizo{" "}
+          <strong>desenvolvedor Front-end</strong>, utilizo{" "}
           <span className="text-gradient-white">Next js</span>,{" "}
           <span className="text-gradient-white">TypeScript</span> e{" "}
           <span className="text-gradient-white">Tailwind Css</span> no meu dia a

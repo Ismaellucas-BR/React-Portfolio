@@ -25,8 +25,14 @@ function MainMenu() {
               </SheetTitle>
               <SheetDescription className="flex flex-col gap-3 mt-10">
                 <a
-                  href="/sobre"
+                  href="/"
                   className="text-3xl text-white font-txt-bold pt-5 font-inter"
+                >
+                  Home
+                </a>
+                <a
+                  href="/sobre"
+                  className="text-3xl text-white font-txt-bold font-inter"
                 >
                   Quem sou
                 </a>
@@ -53,6 +59,12 @@ function MainMenu() {
                 O que você gostaria de ver?
               </SheetTitle>
               <SheetDescription className="flex flex-col gap-3 pt-10">
+                <a
+                  href="/"
+                  className="text-3xl text-white font-txt-bold font-inter"
+                >
+                  Home
+                </a>
                 <a
                   href="/sobre"
                   className="text-3xl text-white font-txt-bold font-inter"

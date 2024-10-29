@@ -35,7 +35,7 @@ function MostRecentWork() {
   const mostRecentProject = Data[Data.length - 1];
 
   return (
-    <section className="most-recent-work lg:w-full max-w-full flex flex-col items-center gap-5 p-10 lg:pb-20 lg:max-w-[1500px] bg-fixed bg-cover bg-no-repeat bg-center">
+    <section className="most-recent-work lg:w-full max-w-full flex flex-col items-center gap-5 pt-10 md:p-10 lg:pb-20 lg:max-w-[1500px] bg-fixed bg-cover bg-no-repeat bg-center">
       <motion.h2
         className="font-inter text-4xl text-center font-bold text-white underline-half2 relative pb-3"
         initial={{ x: -200 }}

@@ -9,10 +9,10 @@ function ProjectsPage() {
   };
 
   return (
-    <section className=" flex flex-col justify-center items-center w-full h-auto gap-10 px-10 py-20 lg:grid lg:grid-cols-3">
+    <section className=" flex flex-col justify-center items-center w-full h-auto gap-10 px-5 py-20 lg:grid lg:grid-cols-3">
       {Data.map((project) => (
         <div
-          className="item-con group w-full min-h-60"
+          className="item-con group w-full max-w-96 min-h-60"
           key={project.id}
           onClick={() => handleViewProject(project.id)}
         >
