@@ -25,7 +25,7 @@ function Menu({ menuItem }) {
             <img
               src={item.image}
               alt={item.alt}
-              className="w-full h-40 object-cover rounded-lg"
+              className="w-full h-40 object-cover object-top rounded-lg"
               width={800}
               height={800}
             />
