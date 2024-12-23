@@ -1,8 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import FirstSectionHome from "../../components/homeComponents/FirstSectionHome";
 import SecondSectionHome from "../../components/HomeComponents/SecondSectionHome";
-import MostRecentWork from "../../components/HomeComponents/MostRecentWork";
-
+import Portfolio from "@/components/homeComponents/Portfolio";
 const Timeline = lazy(() =>
   import("../../components/SobreComponents/VerticalTimeline")
 );
@@ -15,7 +14,7 @@ function About() {
         <Timeline />
       </Suspense>
       <SecondSectionHome />
-      <MostRecentWork />
+      <Portfolio />
     </>
   );
 }

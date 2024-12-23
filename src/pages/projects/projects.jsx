@@ -20,7 +20,7 @@ function ProjectsPage() {
             <img
               src={project.image}
               alt={project.alt}
-              className="w-full h-40 object-contain rounded-lg"
+              className="w-full h-40 rounded-lg object-cover object-top"
               width={800}
               height={800}
             />
