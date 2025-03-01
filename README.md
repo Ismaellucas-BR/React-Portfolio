@@ -1,8 +1,19 @@
-# React + Vite
+# GitHub blog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Último Commit](https://img.shields.io/github/last-commit/Ismaellucas-BR/Blog-Github)
+![Tamanho do Repositório](https://img.shields.io/github/repo-size/Ismaellucas-BR/Blog-Github)
+![Estrelas](https://img.shields.io/github/stars/Ismaellucas-BR/Blog-Github)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este repositório contém um portfólio desenvolvido com as tecnologias mais recentes, destacando projetos e experiências de desenvolvimento. O site é construído com React, Tailwind CSS e JavaScript, oferecendo uma interface clean e responsiva. O projeto exibe os trabalhos de forma dinâmica, com filtragem por categorias e visualização detalhada de cada projeto, proporcionando uma experiência de navegação fluída e moderna.
+
+## 🚀 Demonstração
+
+![Demo](https://github.com/Ismaellucas-BR/React-Portfolio/blob/main/public/assets/developerismaellucasMain.png)
+
+[🔗 Acesse o projeto]([https://developerismaellucas.com)
+
+## 🛠️ Tecnologias utilizadas
+- React.js
+- Vite
+- Tailwind css
