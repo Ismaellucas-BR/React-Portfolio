@@ -11,7 +11,7 @@ Este repositório contém um portfólio desenvolvido com as tecnologias mais rec
 
 ![Demo](https://github.com/Ismaellucas-BR/React-Portfolio/blob/main/public/assets/developerismaellucasMain.png)
 
-[🔗 Acesse o projeto]([https://developerismaellucas.com)
+[🔗 Acesse o projeto](https://developerismaellucas.com)
 
 ## 🛠️ Tecnologias utilizadas
 - React.js
