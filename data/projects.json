@@ -1,5 +1,20 @@
 [
   {
+    "id": 0,
+    "name": "GitHub Blog",
+    "description": "Explore e filtre repositórios do GitHub com facilidade.",
+    "category": "React",
+    "image": "/assets/githubblog.png",
+    "alt": "Aplicação simulando um blog",
+    "gitHub": "https://github.com/Ismaellucas-BR/Feed",
+    "linkSite": "https://githubblog.developerismaellucas.com/",
+    "imageToSlider": [
+      "/assets/UberMain.jpg",
+      "/assets/UberMain.jpg",
+      "/assets/UberMain.jpg"
+    ]
+  },
+  {
     "id": 1,
     "name": "Uber - Em andamento",
     "description": "Recriando o site da Uber utilizando React js e Tailwind css.",
@@ -17,7 +32,7 @@
   {
     "id": 2,
     "name": "Feed",
-    "description": "Aplicação simulando uma rede social, o que possibilitou estudar mais os estados React js",
+    "description": "Simulação de rede social com foco em estados do React.",
     "category": "Tailwind",
     "image": "/assets/MainPrintFeed.jpg",
     "alt": "Aplicação simulando uma rede social",

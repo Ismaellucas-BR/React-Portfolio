@@ -16,7 +16,7 @@ function ProjectsPage() {
           key={project.id}
           onClick={() => handleViewProject(project.id)}
         >
-          <div className="item-container bg-[#111] bg-opacity-50 border border-[#333] p-4 rounded-lg shadow-md hover:shadow-sm hover:shadow-light-green/90 hover:cursor-pointer hover:rounded-lg lg:hover:scale-110  transition-all">
+          <div className="item-container bg-[#111] bg-opacity-50 border border-[#333] p-4 rounded-lg shadow-md hover:shadow-xs hover:shadow-light-green/90 hover:cursor-pointer hover:rounded-lg lg:hover:scale-110  transition-all">
             <img
               src={project.image}
               alt={project.alt}

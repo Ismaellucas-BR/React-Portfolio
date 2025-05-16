@@ -1,8 +1,97 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap")
+layer(base);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap")
+layer(base);
+@import "tailwindcss";
+
+@plugin 'tailwindcss-animate';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --background-image-light-gradient: linear-gradient(
+    rgb(255, 255, 255),
+    rgb(173, 173, 173)
+  );
+  --background-image-white-gradient: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  --background-image-green-gradient: linear-gradient(
+    270deg,
+    #5cd2b93d 0%,
+    #151515 80%
+  );
+
+  --font-poppins: var(--font-poppins);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-inter: Inter, sans-serif;
+
+  --color-light-green: rgb(92, 210, 185);
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --breakpoint-xl-custom: 1500px;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
 
 @layer base {
   :root {
@@ -60,137 +149,135 @@
     --chart-5: 340 75% 55%;
   }
 }
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --font-poppins: "Poppins", sans-serif;
-  --font-inter: "Inter", sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-    --light-green: rgb(92, 210, 185);
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+    --font-poppins: "Poppins", sans-serif;
+    --font-inter: "Inter", sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --foreground-rgb: 255, 255, 255;
+      --background-start-rgb: 0, 0, 0;
+      --background-end-rgb: 0, 0, 0;
+      --light-green: rgb(92, 210, 185);
+    }
+  }
+
+  body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(var(--background-end-rgb))
+      )
+      rgb(var(--background-start-rgb));
   }
 }
-.bg-skill {
-  background-image: url("/assets/bg-skills.jpg");
-}
-.most-recent-work {
-  background-image: url("/assets/woman-with-artistic-make-up-P7ZSU5P.jpg");
-}
-.bg-movement {
-  background-image: url("/assets/night-star-background.jpg");
-}
-.text-gradient {
-  background-image: linear-gradient(rgb(255, 255, 255), rgb(173, 173, 173));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.text-gradient-blue {
-  background-image: radial-gradient(
-    circle,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(148, 187, 233, 1) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.text-gradient-white {
-  background-image: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.underline-half::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 50%;
-  height: 2px;
-  background-color: var(--light-green);
-}
-.underline-half2::after {
-  content: "";
-  position: absolute;
-  bottom: 4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50%;
-  height: 3px;
-  background-color: var(--light-green);
-}
-.swiper-button-prev,
-.swiper-button-next {
-  color: var(--light-green) !important;
-}
-.swiper-pagination-bullet {
-  background-color: white !important;
-}
-.swiper-pagination-bullet-active {
-  background-color: var(--light-green) !important;
-}
-.radial {
-  background: rgb(92, 210, 185);
-  background: radial-gradient(
-    circle at center,
-    rgba(92, 210, 185, 1) 0%,
-    rgba(92, 210, 185, 0) 80%
-  );
-}
+@layer utilities {
+  .bg-skill {
+    background-image: url("/assets/bg-skills.jpg");
+  }
+  .most-recent-work {
+    background-image: url("/assets/woman-with-artistic-make-up-P7ZSU5P.jpg");
+  }
+  .bg-movement {
+    background-image: url("/assets/night-star-background.jpg");
+  }
+  .text-gradient {
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(173, 173, 173));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text-gradient-blue {
+    background-image: radial-gradient(
+      circle,
+      rgba(238, 174, 202, 1) 0%,
+      rgba(148, 187, 233, 1) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text-gradient-white {
+    background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .underline-half::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background-color: var(--light-green);
+  }
+  .underline-half2::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 3px;
+    background-color: var(--light-green);
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: var(--light-green) !important;
+  }
+  .swiper-pagination-bullet {
+    background-color: white !important;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: var(--light-green) !important;
+  }
+  .radial {
+    background: rgb(92, 210, 185);
+    background: radial-gradient(
+      circle at center,
+      rgba(92, 210, 185, 1) 0%,
+      rgba(92, 210, 185, 0) 80%
+    );
+  }
 
-/*Card page Sobre*/
-.TimelineCardContentWrapper-sc-1427v1d-2 section {
-  border: 1px solid white;
-}
-.ImageWrapper-sc-1yk7mm5-8 img {
-  object-fit: contain;
-  max-width: 100%;
-  max-height: 100%;
-}
-.CardMediaHeader-sc-1yk7mm5-7 h1,
-.MediaDetailsWrapper-sc-1yk7mm5-3 h2,
-.TimelineContentDetailsWrapper-sc-d7qjm1-7 p {
-  color: white;
-  font-family: "Inter", sans-serif;
-}
-.MediaDetailsWrapper-sc-1yk7mm5-3 {
-  margin: 0;
-}
-.CardSubTitle-sc-d7qjm1-2 {
-  margin-left: 15px !important;
-}
-.CardTitle-sc-d7qjm1-3 {
-  color: white !important;
-}
-.rc-title {
-  font-family: "Inter", sans-serif;
+  /*Card page Sobre*/
+  .TimelineCardContentWrapper-sc-1427v1d-2 section {
+    border: 1px solid white;
+  }
+  .ImageWrapper-sc-1yk7mm5-8 img {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .CardMediaHeader-sc-1yk7mm5-7 h1,
+  .MediaDetailsWrapper-sc-1yk7mm5-3 h2,
+  .TimelineContentDetailsWrapper-sc-d7qjm1-7 p {
+    color: white;
+    font-family: "Inter", sans-serif;
+  }
+  .MediaDetailsWrapper-sc-1yk7mm5-3 {
+    margin: 0;
+  }
+  .CardSubTitle-sc-d7qjm1-2 {
+    margin-left: 15px !important;
+  }
+  .CardTitle-sc-d7qjm1-3 {
+    color: white !important;
+  }
+  .rc-title {
+    font-family: "Inter", sans-serif;
+  }
 }
 @layer base {
   * {
@@ -199,4 +286,16 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+.TimelineContentDetails-sc-d7qjm1-5 {
+  color: white !important;
+}
+.ccTkJh {
+  height: auto !important;
+}
+.ImageWrapper-sc-1yk7mm5-8 .bFOzmI {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

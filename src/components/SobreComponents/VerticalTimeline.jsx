@@ -50,11 +50,10 @@ function VerticalTimeline() {
   return (
     <article
       className="flex flex-col gap-5 p-5 pb-10 
-     lg:max-w-[1500px] w-full lg:pb-16 lg:mx-8 lg:items-center"
-    >
+     lg:max-w-[1500px] w-full lg:pb-16 lg:mx-8 lg:items-center ">
       <MainTitle whiteText="Jornada" greenText="Profissional" />
       <Chrono
-        className="w-full font-inter"
+        className="w-full font-inter h-auto"
         cardWidth="500px"
         items={items}
         mode="VERTICAL_ALTERNATING"
@@ -66,7 +65,7 @@ function VerticalTimeline() {
           secondary: "rgb(92, 210, 185)",
           cardBgColor: "rgba(17, 17, 17, 0.7)",
           titleColor: "white",
-          titleColorActive: "black",
+          titleColorActive: "white",
         }}
       />
     </article>

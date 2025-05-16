@@ -30,7 +30,7 @@ function Portfolio() {
   };
 
   return (
-    <section className="flex flex-col gap-5 p-5 lg:max-w-[1500px] lg:mx-8 items-center">
+    <section className="flex flex-col gap-5 p-5 bg-black lg:max-w-[1500px] lg:mx-8 items-center">
       <div className="w-full flex flex-col items-center font-semibold">
         <h3 className="text-light-green text-sm font-inter">PORTFOLIO</h3>
         <MainTitle whiteText="Últimos" greenText="Trabalhos" />

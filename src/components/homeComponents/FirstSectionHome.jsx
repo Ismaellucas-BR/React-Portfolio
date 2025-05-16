@@ -6,9 +6,8 @@ import Instagram from "./Instagram";
 function FirstSectionHome() {
   return (
     <section
-      className="flex flex-col-reverse gap-5 w-full pb-10 lg:flex 
-     lg:max-w-[1500px] lg:mx-8 lg:flex-row-reverse lg:items-center md:p-5"
-    >
+      className="flex flex-col-reverse gap-5 w-full pb-10 bg-black lg:flex 
+     lg:max-w-[1500px] lg:mx-8 lg:flex-row-reverse lg:items-center md:p-5">
       <div className="left-side w-full lg:w-1/2 lg:flex lg:justify-center">
         <div className="lg:w-[500px]">
           <img
@@ -26,8 +25,7 @@ function FirstSectionHome() {
             className="font-inter text-xl font-semibold text-light-green"
             initial={{ x: -200 }}
             animate={{ x: [-200, 15, 0] }}
-            transition={{ duration: 2, ease: "easeInOut" }}
-          >
+            transition={{ duration: 2, ease: "easeInOut" }}>
             Quem sou eu?
           </motion.h2>
           <motion.h1
@@ -38,8 +36,7 @@ function FirstSectionHome() {
               duration: 3,
               ease: "easeInOut",
               opacity: { duration: 1.5, ease: "easeInOut" },
-            }}
-          >
+            }}>
             Olá, eu sou <br className="hidden lg:flex"></br>
             <span className="text-light-green">Ismael Lucas</span>
           </motion.h1>
@@ -57,8 +54,7 @@ function FirstSectionHome() {
           <motion.div
             whileHover={{ scale: 1.2 }}
             transition={{ type: "spring", stiffness: 300 }}
-            style={{ display: "inline-block" }}
-          >
+            style={{ display: "inline-block" }}>
             <a href="https://www.instagram.com/ismael_lucas36/" target="_blank">
               <Instagram fillone="fill-light-green" />
             </a>
@@ -66,20 +62,17 @@ function FirstSectionHome() {
           <motion.div
             whileHover={{ scale: 1.2 }}
             transition={{ type: "spring", stiffness: 300 }}
-            style={{ display: "inline-block" }}
-          >
+            style={{ display: "inline-block" }}>
             <a
               href="https://www.linkedin.com/in/ismael-lucas-72bb04196/"
-              target="_blank"
-            >
+              target="_blank">
               <LinkedinSvg fillone="fill-light-green" filltwo="fill-red" />
             </a>
           </motion.div>
           <motion.div
             whileHover={{ scale: 1.2 }}
             transition={{ type: "spring", stiffness: 300 }}
-            style={{ display: "inline-block" }}
-          >
+            style={{ display: "inline-block" }}>
             <a href="https://github.com/Ismaellucas-BR" target="_blank">
               <GitHubSvg fillone="fill-light-green" filltwo="fill-red" />
             </a>

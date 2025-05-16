@@ -16,7 +16,7 @@ function DinamicPage({ params }) {
   return (
     <section className="project-detail flex flex-col items-center justify-center w-full px-10 py-20">
       <div
-        className="relative h-96 w-full max-w-7xl  bg-cover bg-no-repeat bg-center rounded-lg shadow-sm"
+        className="relative h-96 w-full max-w-7xl  bg-cover bg-no-repeat bg-center rounded-lg shadow-xs"
         style={{ backgroundImage: `url(${project.image})` }}
       >
         <div className="w-full h-full bg-black/70"></div>
