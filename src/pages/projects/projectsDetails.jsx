@@ -5,7 +5,7 @@ import GitHub from "../../components/icons/GitHub";
 import PlayButton from "../../components/icons/PlayButton";
 import { useParams } from "react-router-dom";
 
-function DinamicPage({ params }) {
+function DinamicPage() {
   const { id } = useParams();
   const project = Data.find((proj) => proj.id === parseInt(id));
 
@@ -14,44 +14,72 @@ function DinamicPage({ params }) {
   }
 
   return (
-    <section className="project-detail flex flex-col items-center justify-center w-full px-10 py-20">
-      <div
-        className="relative h-96 w-full max-w-7xl  bg-cover bg-no-repeat bg-center rounded-lg shadow-xs"
-        style={{ backgroundImage: `url(${project.image})` }}
-      >
-        <div className="w-full h-full bg-black/70"></div>
-        <h1 className="absolute top-2/4 left-2/4 translate-x-[-50%] text-2xl lg:text-5xl font-bold font-inter w-full text-center">
+    <section className="project-detail flex flex-col w-full h-full lg:h-screen lg:flex-row">
+      {/* Coluna Esquerda (Texto Fixo) */}
+      <div className="leftSide sticky top-0 flex flex-col items-start justify-start h-full p-10 w-full text-white md:w-1/2 lg:h-screen">
+        <h1 className="text-2xl lg:text-5xl font-bold font-inter w-full text-left">
           {project.name}
         </h1>
+        <p className="mt-10 font-inter text-lg">{project.description}</p>
+
+        {project.haveLink !== true ? null : (
+          <div className="flex flex-col justify-start items-start w-full max-w-7xl py-10 gap-10 font-inter text-xl capitalize font-normal md:flex-row">
+            <div className="flex justify-center items-center gap-5">
+              Veja agora:
+              <motion.div
+                whileHover={{ scale: 1.2 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                style={{ display: "inline-block" }}>
+                <a
+                  href={project.linkSite}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <PlayButton fillone="fill-light-green" filltwo="fill-red" />
+                </a>
+              </motion.div>
+            </div>
+            <div className="flex justify-center items-center gap-5">
+              <span>Repositório:</span>
+              <motion.div
+                whileHover={{ scale: 1.2 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                style={{ display: "inline-block" }}>
+                <a
+                  href={project.gitHub}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <GitHub fillone="fill-light-green" filltwo="fill-red" />
+                </a>
+              </motion.div>
+            </div>
+          </div>
+        )}
+        <div className="hidden justify-left items-left scroll-indicator w-full h-20 bg-black text-light-green lg:flex">
+          <motion.div
+            animate={{ x: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 1 }}
+            className="font-poppins font-semibold text-lg flex items-center gap-2">
+            <span>Role a imagem para ver mais →</span>
+          </motion.div>
+        </div>
       </div>
 
-      <p className="mt-10 font-inter text-lg">{project.description}</p>
+      {/* Coluna Direita (Imagem Rolável - Desktop) */}
+      <div className="hidden rightSide w-full md:w-1/2 overflow-y-auto h-screen lg:block">
+        <img
+          src={project.imageInterna}
+          alt="imagem do site"
+          className="w-full h-auto object-cover"
+        />
+      </div>
 
-      <div className="flex flex-col justify-start items-start w-full max-w-7xl py-10 gap-5 font-inter text-xl capitalize font-normal lg:p-10">
-        <div className="flex justify-center items-center gap-5">
-          Veja agora:
-          <motion.div
-            whileHover={{ scale: 1.2 }}
-            transition={{ type: "spring", stiffness: 300 }}
-            style={{ display: "inline-block" }}
-          >
-            <a href={project.linkSite} target="_blank">
-              <PlayButton fillone="fill-light-green" filltwo="fill-red" />
-            </a>
-          </motion.div>
-        </div>
-        <div className="flex justify-center items-center gap-5">
-          <span>Repositório:</span>
-          <motion.div
-            whileHover={{ scale: 1.2 }}
-            transition={{ type: "spring", stiffness: 300 }}
-            style={{ display: "inline-block" }}
-          >
-            <a href={project.gitHub} target="_blank">
-              <GitHub fillone="fill-light-green" filltwo="fill-red" />
-            </a>
-          </motion.div>
-        </div>
+      {/* Coluna Direita (Imagem Fixa - Mobile) */}
+      <div className="flex lg:hidden rightSideMobile w-full h-full px-5 pb-10">
+        <img
+          src={project.image}
+          alt="imagem do site"
+          className="w-full h-full rounded-md"
+        />
       </div>
     </section>
   );

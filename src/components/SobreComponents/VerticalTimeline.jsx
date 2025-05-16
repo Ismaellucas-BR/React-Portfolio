@@ -53,7 +53,7 @@ function VerticalTimeline() {
      lg:max-w-[1500px] w-full lg:pb-16 lg:mx-8 lg:items-center ">
       <MainTitle whiteText="Jornada" greenText="Profissional" />
       <Chrono
-        className="w-full font-inter h-auto"
+        className="w-full font-inter object-contain"
         cardWidth="500px"
         items={items}
         mode="VERTICAL_ALTERNATING"

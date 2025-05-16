@@ -22,7 +22,7 @@ function Menu({ menuItem }) {
           onClick={() => HandleViewProjectDetails(item.id)}>
           <div className="item-container bg-opacity-50 border border-[#333] p-4 rounded-lg shadow-md font-inter">
             <img
-              src={item.image}
+              src={item.thumbnail}
               alt={item.alt}
               className="w-full h-40 object-cover object-top rounded-lg"
               width={800}
