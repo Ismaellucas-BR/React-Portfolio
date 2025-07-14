@@ -9,7 +9,7 @@ import {
 
 function MainMenu() {
   return (
-    <div className="flex items-end justify-between w-full bg-black">
+    <div className="flex items-end justify-between w-full">
       <div className="flex justify-end items-center w-full sm:hidden">
         <Sheet>
           <SheetTrigger>
@@ -17,29 +17,25 @@ function MainMenu() {
           </SheetTrigger>
           <SheetContent
             side="top"
-            className="bg-black/90 border-b-light-green/70"
-          >
-            <SheetHeader className="text-white text-left">
+            className="bg-black/90 border-b-light-green/70">
+            <SheetHeader className=" text-white text-left">
               <SheetTitle className="text-white font-inter">
                 O que você gostaria de ver?
               </SheetTitle>
               <SheetDescription className="flex flex-col gap-3 mt-10">
                 <a
                   href="/"
-                  className="text-3xl text-white font-txt-bold pt-5 font-inter"
-                >
+                  className="text-2xl text-white font-txt-bold pt-5 font-inter">
                   Home
                 </a>
                 <a
                   href="/sobre"
-                  className="text-3xl text-white font-txt-bold font-inter"
-                >
+                  className="text-2xl text-white font-txt-bold font-inter">
                   Quem sou
                 </a>
                 <a
                   href="/projects"
-                  className="text-3xl text-white font-txt-bold font-inter"
-                >
+                  className="text-2xl text-white font-txt-bold font-inter">
                   Projetos
                 </a>
               </SheetDescription>
@@ -52,29 +48,25 @@ function MainMenu() {
           <SheetTrigger className="font-inter">Menu</SheetTrigger>
           <SheetContent
             side="right"
-            className="bg-black/90 border-l-light-green/70"
-          >
-            <SheetHeader className="bg-black text-white text-left">
-              <SheetTitle className="bg-black text-white font-inter">
+            className="bg-black/90 border-l-light-green/70">
+            <SheetHeader className=" text-white text-left">
+              <SheetTitle className=" text-white font-inter">
                 O que você gostaria de ver?
               </SheetTitle>
               <SheetDescription className="flex flex-col gap-3 pt-10">
                 <a
                   href="/"
-                  className="text-3xl text-white font-txt-bold font-inter"
-                >
+                  className="text-2xl text-white font-txt-bold font-inter">
                   Home
                 </a>
                 <a
                   href="/sobre"
-                  className="text-3xl text-white font-txt-bold font-inter"
-                >
+                  className="text-2xl text-white font-txt-bold font-inter">
                   Quem sou
                 </a>
                 <a
                   href="/projects"
-                  className="text-3xl text-white font-txt-bold font-inter"
-                >
+                  className="text-2xl text-white font-txt-bold font-inter">
                   Projetos
                 </a>
               </SheetDescription>

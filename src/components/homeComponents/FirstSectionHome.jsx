@@ -29,7 +29,7 @@ function FirstSectionHome() {
             Quem sou eu?
           </motion.h2>
           <motion.h1
-            className="relative underline-half font-poppins text-3xl font-bold lg:text-6xl lg:w-full"
+            className="relative underline-half font-poppins text-3xl font-bold lg:text-6xl lg:w-full text-white"
             initial={{ x: 600, opacity: 0 }}
             animate={{ x: [600, -10, 0], opacity: [0, 1] }}
             transition={{

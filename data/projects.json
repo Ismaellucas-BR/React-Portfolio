@@ -1,25 +1,27 @@
 [
   {
-    "id": 0,
-    "name": "GitHub Blog",
-    "description": "Explore e filtre repositórios do GitHub com facilidade.",
-    "category": "React",
-    "thumbnail": "/assets/gitblgMain.webp",
-    "imageInterna": "/assets/githubblog.png",
-    "alt": "Aplicação simulando um blog",
+    "id": 4,
+    "name": "Feed",
+    "description": "Simulação de rede social com foco em estados do React.",
+    "status": "complete",
+    "category": "Tailwind",
+    "thumbnail": "/assets/MainPrintFeed.jpg",
+    "imageInterna": "/assets/feedHome.png",
+    "alt": "Aplicação simulando uma rede social",
     "haveLink": true,
     "gitHub": "https://github.com/Ismaellucas-BR/Feed",
-    "linkSite": "https://githubblog.developerismaellucas.com/",
+    "linkSite": "https://feed.developerismaellucas.com/",
     "imageToSlider": [
-      "/assets/UberMain.jpg",
-      "/assets/UberMain.jpg",
-      "/assets/UberMain.jpg"
+      "/assets/MainPrintFeed.jpg",
+      "/assets/MainPrintFeed.jpg",
+      "/assets/MainPrintFeed.jpg"
     ]
   },
   {
-    "id": 1,
+    "id": 3,
     "name": "Uber",
     "description": "Recriando o site da Uber utilizando React js e Tailwind css.",
+    "status": "complete",
     "category": "React",
     "thumbnail": "/assets/UberMain.jpg",
     "imageInterna": "/assets/uberHome.png",
@@ -35,19 +37,56 @@
   },
   {
     "id": 2,
-    "name": "Feed",
-    "description": "Simulação de rede social com foco em estados do React.",
-    "category": "Tailwind",
-    "thumbnail": "/assets/MainPrintFeed.jpg",
-    "imageInterna": "/assets/feedHome.png",
-    "alt": "Aplicação simulando uma rede social",
+    "name": "GitHub Blog",
+    "description": "Explore e filtre repositórios do GitHub com facilidade.",
+    "status": "complete",
+    "category": "React",
+    "thumbnail": "/assets/gitblgMain.webp",
+    "imageInterna": "/assets/githubblog.png",
+    "alt": "Aplicação simulando um blog",
     "haveLink": true,
     "gitHub": "https://github.com/Ismaellucas-BR/Feed",
-    "linkSite": "https://feed.developerismaellucas.com/",
+    "linkSite": "https://githubblog.developerismaellucas.com/",
     "imageToSlider": [
-      "/assets/MainPrintFeed.jpg",
-      "/assets/MainPrintFeed.jpg",
-      "/assets/MainPrintFeed.jpg"
+      "/assets/UberMain.jpg",
+      "/assets/UberMain.jpg",
+      "/assets/UberMain.jpg"
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Coca-cola - Em andamento",
+    "description": "Uma jornada digital pelo universo Coca-Cola",
+    "status": "complete",
+    "category": "React",
+    "thumbnail": "/assets/cocathumb.jpg",
+    "imageInterna": "/assets/githubblog.png",
+    "alt": "Aplicação simulando um site da coca-cola",
+    "haveLink": true,
+    "gitHub": "https://github.com/Ismaellucas-BR/React-coca-cola",
+    "linkSite": "https://cocacola.developerismaellucas.com/",
+    "imageToSlider": [
+      "/assets/UberMain.jpg",
+      "/assets/UberMain.jpg",
+      "/assets/UberMain.jpg"
+    ]
+  },
+  {
+    "id": 0,
+    "name": "Bloco de nota",
+    "description": "Onde suas ideias ganham espaço.",
+    "status": "in progress",
+    "category": "React",
+    "thumbnail": "/assets/texteditor.webp",
+    "imageInterna": "/assets/githubblog.png",
+    "alt": "Aplicação simulando um site da coca-cola",
+    "haveLink": false,
+    "gitHub": "https://github.com/Ismaellucas-BR/Feed",
+    "linkSite": "https://githubblog.developerismaellucas.com/",
+    "imageToSlider": [
+      "/assets/UberMain.jpg",
+      "/assets/UberMain.jpg",
+      "/assets/UberMain.jpg"
     ]
   }
 ]

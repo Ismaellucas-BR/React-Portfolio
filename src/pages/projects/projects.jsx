@@ -12,10 +12,18 @@ function ProjectsPage() {
     <section className=" flex flex-col justify-center items-center w-full h-auto gap-10 px-5 py-20 lg:grid lg:grid-cols-3">
       {Data.map((project) => (
         <div
-          className="item-con group w-full max-w-96 min-h-60"
+          className={`item-con w-full ${
+            project.status === "in progress"
+              ? "cursor-not-allowed opacity-60 hover:cursor-not-allowed"
+              : "hover:shadow-xs hover:shadow-light-green/90 hover:cursor-pointer hover:rounded-lg hover:scale-105"
+          } transition-all`}
           key={project.id}
-          onClick={() => handleViewProject(project.id)}>
-          <div className="item-container bg-[#111] bg-opacity-50 border border-[#333] p-4 rounded-lg shadow-md hover:shadow-xs hover:shadow-light-green/90 hover:cursor-pointer hover:rounded-lg lg:hover:scale-110  transition-all">
+          onClick={() => {
+            if (project.status !== "in progress") {
+              handleViewProject(project.id);
+            }
+          }}>
+          <div className="item-container bg-[#111] bg-opacity-50 border border-[#333] p-4 rounded-lg shadow-md hover:shadow-xs hover:shadow-light-green/90  hover:rounded-lg lg:hover:scale-110  transition-all text-white">
             <img
               src={project.thumbnail}
               alt={project.alt}
