@@ -1,6 +1,6 @@
 [
   {
-    "id": 4,
+    "id": 0,
     "name": "Feed",
     "description": "Simulação de rede social com foco em estados do React.",
     "status": "complete",
@@ -18,7 +18,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 1,
     "name": "Uber",
     "description": "Recriando o site da Uber utilizando React js e Tailwind css.",
     "status": "complete",
@@ -54,31 +54,33 @@
     ]
   },
   {
-    "id": 1,
-    "name": "Coca-cola - Em andamento",
-    "description": "Uma jornada digital pelo universo Coca-Cola",
+    "id": 3,
+    "name": "Coca-cola",
+    "description": "Uma jornada digital pelo universo icônico da Coca-Cola, repleta de sabor e tradição.",
     "status": "complete",
     "category": "React",
     "thumbnail": "/assets/cocathumb.jpg",
-    "imageInterna": "/assets/githubblog.png",
+    "imageInterna": "/assets/cocacolaHome.webp",
     "alt": "Aplicação simulando um site da coca-cola",
     "haveLink": true,
     "gitHub": "https://github.com/Ismaellucas-BR/React-coca-cola",
     "linkSite": "https://cocacola.developerismaellucas.com/",
     "imageToSlider": [
-      "/assets/UberMain.jpg",
-      "/assets/UberMain.jpg",
-      "/assets/UberMain.jpg"
+      "/assets/cocacola/CocaSlide1.webp",
+      "/assets/cocacola/CocaSlide2.webp",
+      "/assets/cocacola/CocaSlide3.webp",
+      "/assets/cocacola/CocaSlide4.webp",
+      "/assets/cocacola/CocaSlide5.webp"
     ]
   },
   {
-    "id": 0,
-    "name": "Bloco de nota",
+    "id": 4,
+    "name": "Bloco de nota - Em andamento",
     "description": "Onde suas ideias ganham espaço.",
     "status": "in progress",
     "category": "React",
     "thumbnail": "/assets/texteditor.webp",
-    "imageInterna": "/assets/githubblog.png",
+    "imageInterna": "/assets/inProgressImg.webp",
     "alt": "Aplicação simulando um site da coca-cola",
     "haveLink": false,
     "gitHub": "https://github.com/Ismaellucas-BR/Feed",

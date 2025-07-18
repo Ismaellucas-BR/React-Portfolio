@@ -236,6 +236,7 @@ layer(base);
   .swiper-button-next {
     color: var(--light-green) !important;
   }
+
   .swiper-pagination-bullet {
     background-color: white !important;
   }

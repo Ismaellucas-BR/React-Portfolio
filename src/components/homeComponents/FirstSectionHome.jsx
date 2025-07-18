@@ -1,7 +1,6 @@
-import React from "react";
 import { motion } from "framer-motion";
 import LinkedinSvg from "../icons/Linkedin";
-import GitHubSvg from "../icons/Github";
+import GitHubSvg from "../icons/GitHub";
 import Instagram from "./Instagram";
 function FirstSectionHome() {
   return (
@@ -41,7 +40,11 @@ function FirstSectionHome() {
             <span className="text-light-green">Ismael Lucas</span>
           </motion.h1>
         </div>
-        <span className="font-inter text-gradient lg:text-lg">
+        <motion.span
+          className="font-inter text-gradient lg:text-lg"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 2, ease: "easeInOut" }}>
           Tenho 29 anos e atualmente atuo como PJ, desenvolvendo sites e
           funcionalidades para empresas. Hoje sou{" "}
           <strong>desenvolvedor Front-end</strong>, utilizo{" "}
@@ -49,7 +52,8 @@ function FirstSectionHome() {
           <span className="text-gradient-white">TypeScript</span> e{" "}
           <span className="text-gradient-white">Tailwind Css</span> no meu dia a
           dia.
-        </span>
+        </motion.span>
+
         <div className="flex gap-5">
           <motion.div
             whileHover={{ scale: 1.2 }}

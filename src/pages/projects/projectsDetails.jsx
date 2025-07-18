@@ -1,13 +1,13 @@
-import React from "react";
+import { useParams } from "react-router-dom";
 import * as motion from "framer-motion/client";
 import Data from "../../../data/projects.json";
 import GitHub from "../../components/icons/GitHub";
 import PlayButton from "../../components/icons/PlayButton";
-import { useParams } from "react-router-dom";
 
 function DinamicPage() {
   const { id } = useParams();
   const project = Data.find((proj) => proj.id === parseInt(id));
+  const isInProgress = project.status === "in progress";
 
   if (!project) {
     return <p>Projeto não encontrado</p>;
@@ -16,11 +16,15 @@ function DinamicPage() {
   return (
     <section className="project-detail flex flex-col w-full h-full lg:h-screen lg:flex-row">
       {/* Coluna Esquerda (Texto Fixo) */}
-      <div className="leftSide sticky top-0 flex flex-col items-start justify-start h-full p-10 w-full text-white md:w-1/2 lg:h-screen">
-        <h1 className="text-2xl lg:text-5xl font-bold font-inter w-full text-left">
-          {project.name}
-        </h1>
-        <p className="mt-10 font-inter text-lg">{project.description}</p>
+      <div className="leftSide sticky top-0 flex flex-col items-start justify-start h-full p-10 w-full text-white lg:w-1/2 lg:h-screen">
+        <div className="flex flex-col gap-3">
+          <h1 className="text-2xl lg:text-5xl font-bold font-inter w-full text-left">
+            {project.name}
+          </h1>
+          <p className="lg:mt-10 font-inter text-lg text-left">
+            {project.description}
+          </p>
+        </div>
 
         {project.haveLink !== true ? null : (
           <div className="flex flex-col justify-start items-start w-full max-w-7xl py-10 gap-10 font-inter text-xl capitalize font-normal md:flex-row">
@@ -65,18 +69,26 @@ function DinamicPage() {
       </div>
 
       {/* Coluna Direita (Imagem Rolável - Desktop) */}
-      <div className="hidden rightSide w-full md:w-1/2 overflow-y-auto h-screen lg:block">
+      <div
+        className={`hidden md:w-1/2  h-screen  lg:block ${
+          isInProgress ? "overflow-hidden" : "rightSide overflow-y-auto"
+        }`}>
         <img
           src={project.imageInterna}
           alt="imagem do site"
-          className="w-full h-auto object-cover"
+          className={`h-auto object-cover  ${
+            isInProgress ? "w-[60%]!" : "w-full h-auto object-cover "
+          }`}
         />
       </div>
 
       {/* Coluna Direita (Imagem Fixa - Mobile) */}
-      <div className="flex lg:hidden rightSideMobile w-full h-full px-5 pb-10">
+      <div
+        className={`flex lg:hidden w-full h-full px-5 pb-10 ${
+          isInProgress ? "" : "rightSideMobile"
+        }`}>
         <img
-          src={project.image}
+          src={project.imageInterna}
           alt="imagem do site"
           className="w-full h-full rounded-md"
         />

@@ -14,7 +14,7 @@ function MostRecentWork() {
 
   useEffect(() => {
     function handleResize() {
-      window.innerWidth < 720 ? setSlidePerView(1) : setSlidePerView(2);
+      window.innerWidth < 1024 ? setSlidePerView(1) : setSlidePerView(1);
     }
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -32,30 +32,28 @@ function MostRecentWork() {
     setIsModalOpen(false);
   };
 
-  const mostRecentProject = Data[Data.length - 1];
+  const mostRecentProject = Data[Data.length - 2];
 
   return (
-    <section className="most-recent-work lg:w-full max-w-full flex flex-col items-center gap-5 pt-10 md:p-10 lg:pb-20 lg:max-w-[1500px] bg-fixed bg-cover bg-no-repeat bg-center">
+    <section className="most-recent-work w-full max-w-full flex flex-col items-center gap-5 pt-10  bg-fixed bg-cover bg-no-repeat bg-center py-20 md:p-10 lg:pb-20 lg:max-w-[1500px]">
       <motion.h2
         className="font-inter text-4xl text-center font-bold text-white underline-half2 relative pb-3"
         initial={{ x: -200 }}
         animate={{ x: [-200, 15, 0] }}
-        transition={{ duration: 2, ease: "easeInOut" }}
-      >
+        transition={{ duration: 2, ease: "easeInOut" }}>
         Trabalho mais <span className="text-light-green">recente</span>
       </motion.h2>
 
-      <div className="w-[420px] lg:w-[1000px]">
+      <div className="w-[420px] md:w-[620px] lg:w-[1000px]">
         <Swiper
-          className="w-full mt-8"
+          className="w-full mt-8 min-h-[48vh] md:min-h-[65vh] lg:min-h-[75vh]"
           modules={[Navigation, Pagination, A11y]}
           spaceBetween={50}
           slidesPerView={slidePerView}
           navigation
           pagination={{ clickable: true }}
           onSwiper={() => ""}
-          onSlideChange={() => ""}
-        >
+          onSlideChange={() => ""}>
           {mostRecentProject.imageToSlider.map((image, index) => (
             <SwiperSlide key={index}>
               <div className="w-full flex justify-center items-center p-5">
@@ -77,8 +75,7 @@ function MostRecentWork() {
           <div className="relative">
             <button
               className="absolute top-2 right-2 text-white text-2xl"
-              onClick={closeModal}
-            >
+              onClick={closeModal}>
               &times;
             </button>
             <img

@@ -15,7 +15,7 @@ function Menu({ menuItem }) {
 
   return (
     <div className="item w-full grid lg:grid-cols-3 gap-8 justify-items-center mt-7 px-5 text-white">
-      {menuItem.map((item) => (
+      {[...menuItem].reverse().map((item) => (
         <div
           className={`item-con w-full ${
             item.status === "in progress"
@@ -39,7 +39,9 @@ function Menu({ menuItem }) {
             <h2 className="mt-4 text-xl font-bold">
               {truncateText(item.name, 30)}
             </h2>
-            <p className="mt-2">{truncateText(item.description, 100)}</p>
+            <p className="mt-2 line-clamp-2">
+              {truncateText(item.description, 100)}
+            </p>
           </div>
         </div>
       ))}

@@ -13,7 +13,7 @@ function MainMenu() {
       <div className="flex justify-end items-center w-full sm:hidden">
         <Sheet>
           <SheetTrigger>
-            <h2 className="font-inter">Menu</h2>
+            <h2 className="font-inter hover:cursor-pointer">Menu</h2>
           </SheetTrigger>
           <SheetContent
             side="top"
@@ -45,7 +45,9 @@ function MainMenu() {
       </div>
       <div className="hidden justify-end items-center w-full sm:flex">
         <Sheet>
-          <SheetTrigger className="font-inter">Menu</SheetTrigger>
+          <SheetTrigger className="font-inter hover:cursor-pointer">
+            Menu
+          </SheetTrigger>
           <SheetContent
             side="right"
             className="bg-black/90 border-l-light-green/70">

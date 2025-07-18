@@ -20,6 +20,8 @@
     "geist": "^1.3.1",
     "keen-slider": "^6.8.6",
     "lucide-react": "^0.451.0",
+    "motion": "^12.23.6",
+    "motion-plus": "^1.4.1",
     "react": "^18.3.1",
     "react-chrono": "^2.6.1",
     "react-dom": "^18.3.1",
@@ -44,6 +46,7 @@
     "globals": "^15.9.0",
     "postcss": "^8.4.47",
     "tailwindcss": "^4.1.7",
+    "typescript": "^5.8.3",
     "vite": "^5.4.8"
   }
 }

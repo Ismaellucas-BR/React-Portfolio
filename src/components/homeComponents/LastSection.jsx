@@ -4,25 +4,21 @@ import { motion } from "framer-motion";
 import Instagram from "./Instagram";
 function LastSection() {
   return (
-    <section className="radial w-full">
-      <div className="w-full flex flex-col items-center justify-center gap-10 p-5 max-w-[1500px] bg-black bg-opacity-65 h-96">
-        <img
-          src="/assets/Logo.png"
-          width={400}
-          height={200}
-          alt="Ismael Lucas"
-        />
-        <h2 className="font-poppins text-center text-sm lg:text-base">
-          O ontem é história, o amanhã é um mistério,<br></br> mas o hoje é uma
-          dádiva.
-          <br></br>É por isso que se chama presente.
-        </h2>
+    <section className="flex justify-center w-full bg-black bg-opacity-65">
+      <div className="w-[95%] flex flex-col items-center justify-between gap-10 px-5 pt-20 pb-5 max-w-[1500px]  h-auto md:flex-row">
+        <div>
+          <img
+            src="/assets/Logo.png"
+            width={300}
+            height={200}
+            alt="Ismael Lucas"
+          />
+        </div>
         <div className="flex justify-center gap-10">
           <motion.div
             whileHover={{ scale: 1.2 }}
             transition={{ type: "spring", stiffness: 300 }}
-            style={{ display: "inline-block" }}
-          >
+            style={{ display: "inline-block" }}>
             <a href="https://www.instagram.com/ismael_lucas36/" target="_blank">
               <Instagram fillone="fill-light-green" />
             </a>
@@ -30,20 +26,17 @@ function LastSection() {
           <motion.div
             whileHover={{ scale: 1.2 }}
             transition={{ type: "spring", stiffness: 300 }}
-            style={{ display: "inline-block" }}
-          >
+            style={{ display: "inline-block" }}>
             <a
               href="https://www.linkedin.com/in/ismael-lucas-72bb04196/"
-              target="_blank"
-            >
+              target="_blank">
               <LinkedinSvg fillone="fill-light-green" />
             </a>
           </motion.div>
           <motion.div
             whileHover={{ scale: 1.2 }}
             transition={{ type: "spring", stiffness: 300 }}
-            style={{ display: "inline-block" }}
-          >
+            style={{ display: "inline-block" }}>
             <a href="https://github.com/Ismaellucas-BR" target="_blank">
               <GitHubSvg fillone="fill-light-green" />
             </a>
