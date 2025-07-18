@@ -46,7 +46,7 @@ function MostRecentWork() {
 
       <div className="w-[420px] md:w-[620px] lg:w-[1000px]">
         <Swiper
-          className="w-full mt-8 min-h-[48vh] md:min-h-[65vh] lg:min-h-[75vh]"
+          className="w-full mt-8 min-h-[15rem] md:min-h-[65vh] lg:min-h-[85vh] xl:min-h-[75vh]"
           modules={[Navigation, Pagination, A11y]}
           spaceBetween={50}
           slidesPerView={slidePerView}
